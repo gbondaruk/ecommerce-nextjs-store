@@ -23,17 +23,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <header>
-        <nav>
-          <Image src="/images/logo.png" alt="logo" width={50} height={50} />
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/cameras">Cameras</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/cart">Cart</Link>
-        </nav>
-      </header>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <header>
+          <nav>
+            <Image src="/images/logo.png" alt="logo" width={50} height={50} />
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/cameras">Cameras</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/cart">Cart</Link>
+          </nav>
+        </header>
         <main>{children}</main>
       </body>
     </html>
