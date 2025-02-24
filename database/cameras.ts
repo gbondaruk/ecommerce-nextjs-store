@@ -29,7 +29,7 @@ export const getCameraInsecure = cache(async (id: number) => {
   FROM
   cameras
   WHERE
-  id=${id}
+  id = ${id}
   `;
 
   return camera;
