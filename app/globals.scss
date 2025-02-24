@@ -9,6 +9,24 @@
     --foreground: #ededed;
   }
 }
+nav {
+  width: 100vw;
+  height: 4rem;
+  background: #d6d3d1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  > div a {
+    margin: 0.25rem;
+  }
+}
 
 html,
 body {
