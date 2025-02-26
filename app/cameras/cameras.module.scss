@@ -1,6 +1,24 @@
 .cameraPage {
   display: flex;
   flex-direction: row;
-  max-width: 90vw;
   flex-wrap: wrap;
+  justify-content: center;
+}
+.cameraPageH1 {
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.singleCameraDiv {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 10px;
+  border-style: dashed;
+  border-radius: 25px;
+  padding: 10px;
 }

@@ -166,3 +166,11 @@ a.secondary {
     filter: invert();
   }
 }
+
+.primary {
+  color: #1a1a1a;
+}
+
+.secondary {
+  color: #1a1a1a;
+}
