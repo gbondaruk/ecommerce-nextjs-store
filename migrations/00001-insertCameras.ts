@@ -2,7 +2,6 @@ import type { Sql } from 'postgres';
 
 const cameras = [
   {
-    id: 1,
     brand: 'Nikon',
     title: 'F-301',
     technology: 'analog',
@@ -11,7 +10,6 @@ const cameras = [
     price: '300',
   },
   {
-    id: 2,
     brand: 'Pentax',
     title: 'Asahi SV',
     technology: 'analog',
@@ -20,7 +18,6 @@ const cameras = [
     price: '230',
   },
   {
-    id: 3,
     brand: 'Canon',
     title: 'AF-7',
     technology: 'analog',
@@ -29,7 +26,6 @@ const cameras = [
     price: '40',
   },
   {
-    id: 4,
     brand: 'Leica',
     title: 'R5',
     technology: 'analog',
@@ -38,7 +34,6 @@ const cameras = [
     price: '330',
   },
   {
-    id: 5,
     brand: 'Kodak',
     title: 'Brownie Hawkeye',
     technology: 'analog',
@@ -51,23 +46,36 @@ const cameras = [
 export async function up(sql: Sql) {
   for (const camera of cameras) {
     await sql`
-  INSERT INTO
-  cameras (
-    brand,
-    title,
-    technology,
-    condition,
-    production_year
-    price
-  )
-  VALUES
-  (${camera.brand}),
-  (${camera.title}),
-  (${camera.technology}),
-  (${camera.condition}),
-  (${camera.productionYear}),
-  (${camera.price})
-  `;
+      INSERT INTO
+        cameras (
+          id,
+          brand,
+          title,
+          technology,
+          condition,
+          production_year,
+          price,
+        )
+      VALUES
+        (
+          ${camera.brand}
+        ),
+        (
+          ${camera.title}
+        ),
+        (
+          ${camera.technology}
+        ),
+        (
+          ${camera.condition}
+        ),
+        (
+          ${camera.productionYear}
+        ),
+        (
+          ${camera.price}
+        )
+    `;
   }
 }
 
