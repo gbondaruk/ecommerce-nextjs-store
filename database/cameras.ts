@@ -1,15 +1,6 @@
 import { cache } from 'react';
 import { sql } from '../database/connect';
-
-type Camera = {
-  id: number;
-  brand: string;
-  title: string;
-  technology: string;
-  condition: string;
-  productionYear: Date;
-  price: number;
-};
+import type { Camera } from '../migrations/00000-createTableCameras';
 
 export const getCamerasInsecure = cache(async () => {
   const cameras = await sql<Camera[]>`

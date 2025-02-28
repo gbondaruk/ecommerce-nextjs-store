@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getCameraInsecure } from '../../../database/cameras';
+import { getCameraInsecure } from '../../../database/cameras.ts';
 import styles from '../cameras.module.scss';
 
 export async function generateMetadata(props) {
