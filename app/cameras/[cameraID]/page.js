@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import { getCameraInsecure } from '../../../database/cameras.ts';
-import styles from '../cameras.module.scss';
+import { getCameraInsecure } from '../../../database/cameras';
 
 export async function generateMetadata(props) {
   const singleCamera = await getCameraInsecure(

@@ -13,11 +13,12 @@ export type Camera = {
 export async function up(sql: Sql) {
   await sql`
     CREATE TABLE cameras (
+      id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
       brand varchar(30) NOT NULL,
       title varchar(30) NOT NULL,
       technology varchar(30) NOT NULL,
       condition varchar(30) NOT NULL,
-      production_year varchar(10) NOT NULL,
+      production_year varchar(30) NOT NULL,
       price integer NOT NULL
     )
   `;
